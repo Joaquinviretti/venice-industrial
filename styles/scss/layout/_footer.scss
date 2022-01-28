@@ -1,0 +1,25 @@
+footer {
+    background-color: $secondaryLight;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        color: $primaryLight;
+        @extend .outfit;
+        font-size: 25px;
+        font-weight: normal;
+    }
+
+    ul {
+        display: flex;
+        margin-top: 20px;
+        list-style: none;
+        width: 140px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}

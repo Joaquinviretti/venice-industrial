@@ -1,0 +1,14 @@
+.button {
+    text-decoration: none;
+    color: $primaryLight;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    @extend .outfit;
+    font-size: 20px;
+    font-weight: 600;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

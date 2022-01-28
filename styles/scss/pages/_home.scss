@@ -1,0 +1,238 @@
+#portada {
+    height: 90vh;
+    min-height: 350px;
+    background-image: url("../../img/portada.png");
+    background-position: center;
+    background-size: cover;
+
+    .portadaContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 10%;
+
+        .line {
+            border-top: 3px solid $text;
+            width: 273px;
+            margin: 20px 0;
+        }
+
+        .mainTitle {
+            color: white;
+            @extend .exo;
+            font-size: 50px;
+        }
+
+        .subtitle {
+            color: white;
+            @extend .exo;
+            font-size: 32px;
+        }
+    }
+}
+
+#productoDelMes {
+    padding-top: 100px;
+
+    .manijas {
+        height: 590px;
+        width: 85%;
+        max-width: 1800px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        background-image: url("../../img/manijas-honolulu.png");
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        .star {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: -70px;
+            width: 200px;
+            height: 210px;
+            background-image: url("../../img/star.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                z-index: 1;
+                color: black;
+                text-align: center;
+                @extend .outfit;
+                color: white;
+                transform: rotate(11.29deg);
+                font-size: 30px;
+            }
+        }
+
+        .degradado {
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 90.1%, rgba(0, 0, 0, 0.8) 100%);
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .manijasText {
+            @extend .exo;
+            color: white;
+            z-index: 1;
+            margin-left: 100px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-size: 32px;
+        }
+    }
+}
+
+#pedidos {
+    padding-top: 100px;
+    display: flex;
+    justify-content: end;
+
+    .pedidosContainer {
+        background-color: $primaryLight;
+        width: 95%;
+        max-width: 2000px;
+        border-radius: 40px 0px 0px 40px;
+
+        h2 {
+            color: white;
+            @extend .exo;
+            text-align: center;
+            font-size: 50px;
+            padding: 40px 0;
+        }
+
+        .pedidosFlex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-bottom: 50px;
+            max-width: 1600px;
+            margin: 0 auto;
+
+            .texto {
+                color: white;
+
+                h3 {
+                    @extend .exo;
+                    font-size: 26px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                ol {
+                    list-style-position: inside;
+                    margin-bottom: 50px;
+
+                    li {
+                        @extend .outfit;
+                        font-weight: normal;
+                        font-size: 30px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            img {
+                display: flex;
+                justify-content: center;
+                height: 400px;
+            }
+        }
+    }
+}
+
+#destacados {
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    h2 {
+        @extend .exo;
+        text-align: center;
+        font-size: 50px;
+        padding: 40px 0;
+        color: $secondary;
+    }
+
+    .destacadosGrid {
+        width: 100%;
+        display: grid;
+        grid-template: "cards" "button" "info";
+        grid-template-rows: auto 180px auto;
+        grid-template-columns: auto;
+
+        .background {
+            height: 70%;
+            position: absolute;
+            bottom: 0;
+            border-radius: 50px 50px 0 0;
+            z-index: -1;
+            width: 100%;
+            background-color: $secondary;
+        }
+
+        .cardsContainer {
+            grid-area: cards;
+            display: flex;
+            justify-content: space-evenly;
+
+            .card1 {
+                @include card("../../img/card1.png");
+            }
+
+            .card2 {
+                @include card("../../img/card2.png");
+            }
+
+            .card3 {
+                @include card("../../img/card3.png");
+            }
+        }
+
+        .verTodos {
+            grid-area: button;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .button {
+                width: 370px;
+                color: $secondary;
+            }
+        }
+
+        .info {
+            grid-area: info;
+            display: flex;
+            justify-content: space-evenly;
+
+            .item {
+                @include item;
+                flex: 1;
+            }
+        }
+    }
+}

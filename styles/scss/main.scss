@@ -1,0 +1,26 @@
+/*abstracts*/
+@import "./abstracts/variables";
+
+/*vendors*/
+@import "./vendors/bootstrap";
+
+/*base*/
+@import "./base/reset";
+@import "./base/typography";
+
+/*layout*/
+@import "./layout/header";
+@import "./layout/footer";
+
+/*components*/
+@import "./components/button";
+@import "./components/card";
+@import "./components/info";
+
+/*pages*/
+@import "./pages/home";
+
+/* 
+sass --watch styles/scss/main.scss styles/css/style.css 
+https://sass-guidelin.es/
+*/

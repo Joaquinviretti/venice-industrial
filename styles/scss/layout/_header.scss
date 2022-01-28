@@ -1,0 +1,28 @@
+header {
+    height: 265px;
+    width: 100%;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    .logo {
+        width: 234px;
+    }
+    .navbar {
+        display: flex;
+        width: 700px;
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            a {
+                text-decoration: none;
+                @extend .bebas;
+                color: $text;
+                font-size: 30px;
+            }
+        }
+    }
+}

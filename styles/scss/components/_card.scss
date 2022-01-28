@@ -1,0 +1,39 @@
+@mixin card($imgRoute) {
+    height: 440px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+
+    .cardImg {
+        background-image: url($imgRoute);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 75%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .cardText {
+        height: 25%;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            color: $text;
+            @extend .exo;
+            font-size: 26px;
+        }
+
+        span {
+            color: black;
+            @extend .outfit;
+            font-size: 20px;
+        }
+
+    }
+
+}

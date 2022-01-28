@@ -1,0 +1,407 @@
+/*abstracts*/
+/*vendors*/
+/*base*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo:wght@600&family=Outfit:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.exo, #destacados .destacadosGrid .cardsContainer .card3 .cardText p, #destacados .destacadosGrid .cardsContainer .card2 .cardText p, #destacados .destacadosGrid .cardsContainer .card1 .cardText p, #destacados h2, #pedidos .pedidosContainer .pedidosFlex .texto h3, #pedidos .pedidosContainer h2, #productoDelMes .manijas .manijasText, #portada .portadaContainer .subtitle, #portada .portadaContainer .mainTitle {
+  font-family: Exo;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.bebas, header .navbar ul a {
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.outfit, #destacados .destacadosGrid .info .item, #destacados .destacadosGrid .cardsContainer .card3 .cardText span, #destacados .destacadosGrid .cardsContainer .card2 .cardText span, #destacados .destacadosGrid .cardsContainer .card1 .cardText span, #pedidos .pedidosContainer .pedidosFlex .texto ol li, #productoDelMes .manijas .star span, .button, footer span {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 28px;
+  letter-spacing: -0.011em;
+}
+
+/*layout*/
+header {
+  height: 265px;
+  width: 100%;
+  background-color: #525C63;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+header .logo {
+  width: 234px;
+}
+header .navbar {
+  display: flex;
+  width: 700px;
+}
+header .navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+header .navbar ul a {
+  text-decoration: none;
+  color: #D1B641;
+  font-size: 30px;
+}
+
+footer {
+  background-color: #DBDDD6;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer span {
+  color: #66737C;
+  font-size: 25px;
+  font-weight: normal;
+}
+footer ul {
+  display: flex;
+  margin-top: 20px;
+  list-style: none;
+  width: 140px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*components*/
+.button {
+  text-decoration: none;
+  color: #66737C;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*pages*/
+#portada {
+  height: 90vh;
+  min-height: 350px;
+  background-image: url("../../img/portada.png");
+  background-position: center;
+  background-size: cover;
+}
+#portada .portadaContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 10%;
+}
+#portada .portadaContainer .line {
+  border-top: 3px solid #D1B641;
+  width: 273px;
+  margin: 20px 0;
+}
+#portada .portadaContainer .mainTitle {
+  color: white;
+  font-size: 50px;
+}
+#portada .portadaContainer .subtitle {
+  color: white;
+  font-size: 32px;
+}
+
+#productoDelMes {
+  padding-top: 100px;
+}
+#productoDelMes .manijas {
+  height: 590px;
+  width: 85%;
+  max-width: 1800px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  background-image: url("../../img/manijas-honolulu.png");
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+#productoDelMes .manijas .star {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: -70px;
+  width: 200px;
+  height: 210px;
+  background-image: url("../../img/star.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#productoDelMes .manijas .star span {
+  z-index: 1;
+  color: black;
+  text-align: center;
+  color: white;
+  transform: rotate(11.29deg);
+  font-size: 30px;
+}
+#productoDelMes .manijas .degradado {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 90.1%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+#productoDelMes .manijas .manijasText {
+  color: white;
+  z-index: 1;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+#productoDelMes .manijas h2 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+#productoDelMes .manijas p {
+  font-size: 32px;
+}
+
+#pedidos {
+  padding-top: 100px;
+  display: flex;
+  justify-content: end;
+}
+#pedidos .pedidosContainer {
+  background-color: #66737C;
+  width: 95%;
+  max-width: 2000px;
+  border-radius: 40px 0px 0px 40px;
+}
+#pedidos .pedidosContainer h2 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  padding: 40px 0;
+}
+#pedidos .pedidosContainer .pedidosFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+#pedidos .pedidosContainer .pedidosFlex .texto {
+  color: white;
+}
+#pedidos .pedidosContainer .pedidosFlex .texto h3 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#pedidos .pedidosContainer .pedidosFlex .texto ol {
+  list-style-position: inside;
+  margin-bottom: 50px;
+}
+#pedidos .pedidosContainer .pedidosFlex .texto ol li {
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+#pedidos .pedidosContainer .pedidosFlex img {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+#destacados {
+  padding-top: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+#destacados h2 {
+  text-align: center;
+  font-size: 50px;
+  padding: 40px 0;
+  color: #858D76;
+}
+#destacados .destacadosGrid {
+  width: 100%;
+  display: grid;
+  grid-template: "cards" "button" "info";
+  grid-template-rows: auto 180px auto;
+  grid-template-columns: auto;
+}
+#destacados .destacadosGrid .background {
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50px 50px 0 0;
+  z-index: -1;
+  width: 100%;
+  background-color: #858D76;
+}
+#destacados .destacadosGrid .cardsContainer {
+  grid-area: cards;
+  display: flex;
+  justify-content: space-evenly;
+}
+#destacados .destacadosGrid .cardsContainer .card1 {
+  height: 440px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+#destacados .destacadosGrid .cardsContainer .card1 .cardImg {
+  background-image: url("../../img/card1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 75%;
+  border-radius: 20px 20px 0 0;
+}
+#destacados .destacadosGrid .cardsContainer .card1 .cardText {
+  height: 25%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#destacados .destacadosGrid .cardsContainer .card1 .cardText p {
+  color: #D1B641;
+  font-size: 26px;
+}
+#destacados .destacadosGrid .cardsContainer .card1 .cardText span {
+  color: black;
+  font-size: 20px;
+}
+#destacados .destacadosGrid .cardsContainer .card2 {
+  height: 440px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+#destacados .destacadosGrid .cardsContainer .card2 .cardImg {
+  background-image: url("../../img/card2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 75%;
+  border-radius: 20px 20px 0 0;
+}
+#destacados .destacadosGrid .cardsContainer .card2 .cardText {
+  height: 25%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#destacados .destacadosGrid .cardsContainer .card2 .cardText p {
+  color: #D1B641;
+  font-size: 26px;
+}
+#destacados .destacadosGrid .cardsContainer .card2 .cardText span {
+  color: black;
+  font-size: 20px;
+}
+#destacados .destacadosGrid .cardsContainer .card3 {
+  height: 440px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+#destacados .destacadosGrid .cardsContainer .card3 .cardImg {
+  background-image: url("../../img/card3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 75%;
+  border-radius: 20px 20px 0 0;
+}
+#destacados .destacadosGrid .cardsContainer .card3 .cardText {
+  height: 25%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#destacados .destacadosGrid .cardsContainer .card3 .cardText p {
+  color: #D1B641;
+  font-size: 26px;
+}
+#destacados .destacadosGrid .cardsContainer .card3 .cardText span {
+  color: black;
+  font-size: 20px;
+}
+#destacados .destacadosGrid .verTodos {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#destacados .destacadosGrid .verTodos .button {
+  width: 370px;
+  color: #858D76;
+}
+#destacados .destacadosGrid .info {
+  grid-area: info;
+  display: flex;
+  justify-content: space-evenly;
+}
+#destacados .destacadosGrid .info .item {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  flex: 1;
+}
+#destacados .destacadosGrid .info .item img {
+  height: 54px;
+  margin-bottom: 20px;
+}
+#destacados .destacadosGrid .info .item p {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+#destacados .destacadosGrid .info .item span {
+  font-size: 20px;
+}
+
+/* 
+sass --watch styles/scss/main.scss styles/css/style.css 
+https://sass-guidelin.es/
+*/
+
+/*# sourceMappingURL=style.css.map */
