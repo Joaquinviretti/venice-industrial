@@ -23,7 +23,7 @@ ul, ol {
   line-height: 160%;
 }
 
-.bebas, header .navbar ul a {
+.bebas, .navbar ul a {
   font-family: Bebas Neue;
   font-style: normal;
   font-weight: normal;
@@ -40,39 +40,113 @@ ul, ol {
 }
 
 /*layout*/
-header {
-  height: 265px;
-  width: 100%;
-  background-color: #525C63;
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  background-color: #525C63;
+  width: 100%;
+  height: 240px;
 }
-header .logo {
+.navbar .topNavbar .logo {
   width: 234px;
 }
-header .navbar {
-  display: flex;
-  align-items: center;
-  width: 700px;
+.navbar .topNavbar button {
+  background-color: initial;
+  border: none;
+  display: none;
 }
-header .navbar ul {
-  width: 100%;
+.navbar .topNavbar #closeMenuButton {
+  display: none;
+}
+.navbar ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
-header .navbar ul a {
+.navbar ul a {
   text-decoration: none;
   color: #D1B641;
   font-size: 30px;
   text-transform: uppercase;
 }
-header .navbar ul a span {
+.navbar #list--desktop {
+  width: 700px;
+  justify-content: space-between;
+  list-style: none;
+}
+.navbar #navLinks--mobile {
   display: none;
 }
 
+@media screen and (max-width: 767.98px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #525C63;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .navbar .topNavbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  .navbar .topNavbar .logo {
+    width: 75px;
+  }
+  .navbar .topNavbar button {
+    position: absolute;
+    top: 15px;
+  }
+  .navbar .topNavbar #closeMenuButton {
+    left: 0;
+    padding-right: 20px;
+  }
+  .navbar .topNavbar #openMenuButton {
+    right: 0;
+    padding-left: 20px;
+    display: inline;
+  }
+  .navbar #navLinks--desktop {
+    display: none;
+  }
+  .navbar #navLinks--mobile {
+    width: 100%;
+    display: flex;
+  }
+  .navbar #list--mobile {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .navbar #list--mobile li {
+    width: 100%;
+  }
+  .navbar #list--mobile li a {
+    text-transform: none;
+    color: white;
+    height: 50px;
+    font-family: outfit;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar #list--mobile li a span {
+    display: block;
+  }
+  .navbar .navLinks--active {
+    display: flex;
+  }
+}
 footer {
   background-color: #DBDDD6;
   height: 180px;

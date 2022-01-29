@@ -1,34 +1,50 @@
-header {
-    height: 265px;
-    width: 100%;
-    background-color: $primary;
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    .logo {
-        width: 234px;
-    }
-    .navbar {
-        display: flex;
-        align-items: center;
-        width: 700px;
-        ul {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            a {
-                text-decoration: none;
-                @extend .bebas;
-                color: $text;
-                font-size: 30px;
-                text-transform: uppercase;
-                span {
-                    display: none;
-                }
-            }
+    background-color: $primary;
+    width: 100%;
+    height: 240px;
+
+    .topNavbar {
+        .logo {
+            width: 234px;
         }
+
+        button {
+            background-color: initial;
+            border: none;
+            display: none;
+        }
+        #closeMenuButton {
+            display: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            @extend .bebas;
+            color: $text;
+            font-size: 30px;
+            text-transform: uppercase;
+
+        }
+    }
+
+    #list--desktop {
+        width: 700px;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    #navLinks--mobile {
+        display: none;
     }
 }
 
@@ -38,6 +54,82 @@ header {
 
 // Small devices (landscape phones, less than 768px)
 @media screen and (max-width: 767.98px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: $primary;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        .topNavbar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+
+            .logo {
+                width: 75px;
+            }
+            button {
+                position: absolute;
+                top: 15px;
+            }
+
+            #closeMenuButton {
+                left: 0;
+                padding-right: 20px;
+            }
+
+            #openMenuButton {
+                right: 0;
+                padding-left: 20px;
+                display: inline;
+            }
+        }
+
+        #navLinks--desktop {
+            display: none;
+        }
+
+        #navLinks--mobile {
+            width: 100%;
+            display: flex;
+        }
+
+        #list--mobile {
+            width: 100%;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            li {
+                width: 100%;
+
+                a {
+                    text-transform: none;
+                    color: white;
+                    height: 50px;
+                    font-family: outfit;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .navLinks--active {
+            display: flex;
+        }
+    }
 }
 
 // Medium devices (tablets, less than 992px)
