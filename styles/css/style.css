@@ -30,7 +30,7 @@ ul, ol {
   line-height: 24px;
 }
 
-.outfit, #destacados .destacadosGrid .info .item, #destacados .destacadosGrid .cardsContainer .card3 .cardText span, #destacados .destacadosGrid .cardsContainer .card2 .cardText span, #destacados .destacadosGrid .cardsContainer .card1 .cardText span, #pedidos .pedidosContainer .pedidosFlex .texto ol li, #productoDelMes .manijas .star span, .button, footer span {
+.outfit, #destacados .destacadosGrid .info--mobile .item, #destacados .destacadosGrid .info .item, #destacados .destacadosGrid .cardsContainer .card3 .cardText span, #destacados .destacadosGrid .cardsContainer .card2 .cardText span, #destacados .destacadosGrid .cardsContainer .card1 .cardText span, #pedidos .pedidosContainer .pedidosFlex .texto ol li, #productoDelMes .manijas .star span, .button, footer span {
   font-family: Outfit;
   font-style: normal;
   font-weight: 500;
@@ -353,8 +353,8 @@ footer ul {
 #destacados .destacadosGrid {
   width: 100%;
   display: grid;
-  grid-template: "cards" "button" "info";
-  grid-template-rows: auto 180px auto;
+  grid-template: "cards" "button" "info" "controls";
+  grid-template-rows: auto 180px auto auto;
   grid-template-columns: auto;
 }
 #destacados .destacadosGrid .background {
@@ -365,6 +365,9 @@ footer ul {
   z-index: -1;
   width: 100%;
   background-color: #858D76;
+}
+#destacados .destacadosGrid .controls {
+  grid-area: controls;
 }
 #destacados .destacadosGrid .cardsContainer {
   grid-area: cards;
@@ -474,12 +477,12 @@ footer ul {
   width: 370px;
   color: #858D76;
 }
-#destacados .destacadosGrid .info {
+#destacados .destacadosGrid .info--mobile, #destacados .destacadosGrid .info {
   grid-area: info;
   display: flex;
   justify-content: space-evenly;
 }
-#destacados .destacadosGrid .info .item {
+#destacados .destacadosGrid .info--mobile .item, #destacados .destacadosGrid .info .item {
   color: white;
   display: flex;
   align-items: center;
@@ -487,17 +490,20 @@ footer ul {
   text-align: center;
   flex: 1;
 }
-#destacados .destacadosGrid .info .item img {
+#destacados .destacadosGrid .info--mobile .item img, #destacados .destacadosGrid .info .item img {
   height: 54px;
   margin-bottom: 20px;
 }
-#destacados .destacadosGrid .info .item p {
+#destacados .destacadosGrid .info--mobile .item p, #destacados .destacadosGrid .info .item p {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 5px;
 }
-#destacados .destacadosGrid .info .item span {
+#destacados .destacadosGrid .info--mobile .item span, #destacados .destacadosGrid .info .item span {
   font-size: 20px;
+}
+#destacados .destacadosGrid .info--mobile {
+  display: none;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -594,13 +600,11 @@ footer ul {
   #destacados h2 {
     font-size: 28px;
   }
-  #destacados .destacadosGrid {
-    overflow: hidden;
-  }
   #destacados .destacadosGrid .cardsContainer {
     justify-content: space-between;
     width: 700px;
     overflow-x: scroll;
+    display: none;
   }
   #destacados .destacadosGrid .cardsContainer .card1, #destacados .destacadosGrid .cardsContainer .card2, #destacados .destacadosGrid .cardsContainer .card3 {
     width: 210px;
@@ -612,8 +616,40 @@ footer ul {
   #destacados .destacadosGrid .cardsContainer .card1 .cardText span, #destacados .destacadosGrid .cardsContainer .card2 .cardText span, #destacados .destacadosGrid .cardsContainer .card3 .cardText span {
     font-size: 16px;
   }
-  #destacados .destacadosGrid .info .item {
+  #destacados .destacadosGrid .info {
+    display: none;
+  }
+  #destacados .destacadosGrid .info--mobile {
+    display: flex;
+  }
+  #destacados .destacadosGrid .info--mobile .item {
     width: 10px;
+  }
+  #destacados .destacadosGrid .info--mobile .item1, #destacados .destacadosGrid .info--mobile .item2, #destacados .destacadosGrid .info--mobile .item3 {
+    display: none;
+  }
+  #destacados .destacadosGrid .info--mobile .item1 {
+    display: inline;
+  }
+  #destacados .destacadosGrid .controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #destacados .destacadosGrid .controls .dot {
+    padding: 5px;
+    margin: 0 10px;
+    height: 15px;
+    width: 15px;
+    background-color: #9FA98B;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  #destacados .destacadosGrid .controls .dot--active {
+    background: #6F7662;
+    width: 30px;
+    border-radius: 50px;
+    transition: all 0.5s;
   }
 }
 /* 

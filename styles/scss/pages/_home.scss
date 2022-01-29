@@ -196,8 +196,8 @@
     .destacadosGrid {
         width: 100%;
         display: grid;
-        grid-template: "cards" "button" "info";
-        grid-template-rows: auto 180px auto;
+        grid-template: "cards" "button" "info" "controls";
+        grid-template-rows: auto 180px auto auto;
         grid-template-columns: auto;
 
         .background {
@@ -208,6 +208,10 @@
             z-index: -1;
             width: 100%;
             background-color: $secondary;
+        }
+
+        .controls {
+            grid-area: controls;
         }
 
         .cardsContainer {
@@ -240,7 +244,7 @@
             }
         }
 
-        .info {
+        .info--mobile, .info {
             grid-area: info;
             display: flex;
             justify-content: space-evenly;
@@ -249,6 +253,10 @@
                 @include item;
                 flex: 1;
             }
+        }
+
+        .info--mobile {
+            display: none;
         }
     }
 }
@@ -365,11 +373,11 @@
         }
 
         .destacadosGrid {
-            overflow: hidden;
             .cardsContainer {
                 justify-content: space-between;
                 width: 700px;
                 overflow-x: scroll;
+                display: none;
                 .card1, .card2, .card3 {
                    width: 210px; 
                    height: 270px;
@@ -385,13 +393,45 @@
             }
 
             .info {
+                display: none;
+            }
+
+            .info--mobile {
+                display: flex;
                 .item {
                     width: 10px;
+                }
+                .item1, .item2, .item3 {
+                    display: none;
+                }
+
+                .item1 {
+                    display: inline;
+                }
+            }
+
+            .controls {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+                .dot {
+                    padding: 5px;
+                    margin: 0 10px;
+                    height: 15px;
+                    width: 15px;
+                    background-color: $primaryControl;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+                .dot--active {
+                    background: $primaryControlActive;
+                    width: 30px;
+                    border-radius: 50px;
+                    transition: all 0.5s;
                 }
             }
 
         }
-
 
     }
 }

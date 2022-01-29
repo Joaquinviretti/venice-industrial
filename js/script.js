@@ -35,3 +35,30 @@ $("#closeMenuButton").on("click", () => {
     $("#list--mobile").hide(200);
 })
 
+$(".dot").on("click", (e) => {
+    clearInterval(myInterval)
+    myInterval = setInterval(changeItem, 4000)
+    let id = e.currentTarget.id
+    $(".dot").removeClass("dot--active")
+    $(".item").hide()
+    $(`.item${id.substring(id.length - 1)}`).show()
+    $(`#${id}`).addClass("dot--active")
+})
+
+const changeItem = () => {
+
+    let id = $(".dot--active").attr("id");
+    $(`#${id}`).removeClass("dot--active");
+    let num = parseInt(id.substring(id.length - 1))
+    $(`.item${num}`).hide()
+    if(num == 3){
+        num = 1;
+    } else {
+        num += 1;
+    }
+    $(`.item${num}`).show()
+    $(`#dot${num}`).addClass("dot--active");
+    
+}
+
+let myInterval = setInterval(changeItem, 3000)
