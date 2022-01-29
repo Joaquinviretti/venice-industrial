@@ -9,6 +9,7 @@
         if (windowsize > 767.98) {
             $("#closeMenuButton").hide();
             $("#list--mobile").hide(200);
+            $("#openMenuButton").hide();
         } else {
             $("#openMenuButton").show();
         }
@@ -16,7 +17,7 @@
     // Execute on load
     checkWidth();
     // Bind event listener
-    $(window).resize(checkWidth);
+    $(window).on("resize", checkWidth);
 })();
 
 $("#openMenuButton").on("click", () => {

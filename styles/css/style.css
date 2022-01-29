@@ -49,6 +49,9 @@ ul, ol {
   width: 100%;
   height: 240px;
 }
+.navbar .topNavbar {
+  padding-top: 10px;
+}
 .navbar .topNavbar .logo {
   width: 234px;
 }
@@ -102,7 +105,7 @@ ul, ol {
   }
   .navbar .topNavbar button {
     position: absolute;
-    top: 15px;
+    top: 25px;
   }
   .navbar .topNavbar #closeMenuButton {
     left: 0;
@@ -133,7 +136,7 @@ ul, ol {
     text-transform: none;
     color: white;
     height: 50px;
-    font-family: outfit;
+    font-family: exo;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -223,7 +226,7 @@ footer ul {
   max-width: 1800px;
   background-position: center;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 0 20px 20px 0;
   background-image: url("../../img/manijas-honolulu.png");
   position: relative;
   display: flex;
@@ -256,7 +259,7 @@ footer ul {
 #productoDelMes .manijas .degradado {
   position: absolute;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 90.1%, rgba(0, 0, 0, 0.8) 100%);
-  border-radius: 20px;
+  border-radius: 0 20px 20px 0;
   width: 100%;
   height: 100%;
 }
@@ -301,11 +304,15 @@ footer ul {
 }
 #pedidos .pedidosContainer .pedidosFlex .texto {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #pedidos .pedidosContainer .pedidosFlex .texto h3 {
   font-size: 26px;
   text-align: center;
   margin-bottom: 30px;
+  max-width: 500px;
 }
 #pedidos .pedidosContainer .pedidosFlex .texto ol {
   list-style-position: inside;
@@ -316,10 +323,17 @@ footer ul {
   font-size: 30px;
   margin-bottom: 30px;
 }
-#pedidos .pedidosContainer .pedidosFlex img {
-  display: flex;
-  justify-content: center;
+#pedidos .pedidosContainer .pedidosFlex .texto .button {
+  width: 100%;
+}
+#pedidos .pedidosContainer .pedidosFlex .textoClientes {
+  display: none;
+}
+#pedidos .pedidosContainer .pedidosFlex .pedidosImg-1 {
   height: 400px;
+}
+#pedidos .pedidosContainer .pedidosFlex .pedidosImg-2 {
+  display: none;
 }
 
 #destacados {
@@ -486,6 +500,122 @@ footer ul {
   font-size: 20px;
 }
 
+@media screen and (max-width: 767.98px) {
+  #portada h1 {
+    font-size: 28px;
+  }
+  #portada h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  #productoDelMes .manijas {
+    height: 225px;
+  }
+  #productoDelMes .manijas .star {
+    width: 75px;
+    height: 75px;
+    right: -30px;
+    top: -30px;
+  }
+  #productoDelMes .manijas .star span {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  #productoDelMes .manijas .manijasText {
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  #productoDelMes .manijas .manijasText h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  #productoDelMes .manijas .manijasText p {
+    font-size: 14px;
+  }
+
+  #pedidos .pedidosContainer {
+    width: 100%;
+    border-radius: 40px;
+    padding: 0 40px;
+  }
+  #pedidos .pedidosContainer h2 {
+    font-size: 28px;
+  }
+  #pedidos .pedidosContainer .pedidosFlex {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .texto h3 {
+    font-size: 18px;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .texto ol {
+    margin-bottom: 0;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .texto ol li {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .texto .button {
+    width: 100%;
+    height: 56px;
+    margin: 15px 0;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .textoClientes {
+    color: white;
+    font-size: 16px;
+    font-family: outfit;
+    text-align: left;
+    width: 100%;
+    display: inline;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .pedidosImgContainer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .pedidosImgContainer img {
+    width: 47%;
+    height: auto;
+  }
+  #pedidos .pedidosContainer .pedidosFlex .pedidosImgContainer .pedidosImg-2 {
+    display: inline;
+  }
+
+  #destacados h2 {
+    font-size: 28px;
+  }
+  #destacados .destacadosGrid {
+    overflow: hidden;
+  }
+  #destacados .destacadosGrid .cardsContainer {
+    justify-content: space-between;
+    width: 700px;
+    overflow-x: scroll;
+  }
+  #destacados .destacadosGrid .cardsContainer .card1, #destacados .destacadosGrid .cardsContainer .card2, #destacados .destacadosGrid .cardsContainer .card3 {
+    width: 210px;
+    height: 270px;
+  }
+  #destacados .destacadosGrid .cardsContainer .card1 .cardText p, #destacados .destacadosGrid .cardsContainer .card2 .cardText p, #destacados .destacadosGrid .cardsContainer .card3 .cardText p {
+    font-size: 20px;
+  }
+  #destacados .destacadosGrid .cardsContainer .card1 .cardText span, #destacados .destacadosGrid .cardsContainer .card2 .cardText span, #destacados .destacadosGrid .cardsContainer .card3 .cardText span {
+    font-size: 16px;
+  }
+  #destacados .destacadosGrid .info .item {
+    width: 10px;
+  }
+}
 /* 
 npm run sass
 sass --watch styles/scss/main.scss styles/css/style.css 

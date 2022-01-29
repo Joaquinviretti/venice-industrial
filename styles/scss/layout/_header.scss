@@ -8,6 +8,7 @@
     height: 240px;
 
     .topNavbar {
+        padding-top: 10px;
         .logo {
             width: 234px;
         }
@@ -33,7 +34,6 @@
             color: $text;
             font-size: 30px;
             text-transform: uppercase;
-
         }
     }
 
@@ -75,7 +75,7 @@
             }
             button {
                 position: absolute;
-                top: 15px;
+                top: 25px;
             }
 
             #closeMenuButton {
@@ -112,7 +112,7 @@
                     text-transform: none;
                     color: white;
                     height: 50px;
-                    font-family: outfit;
+                    font-family: exo;
                     font-size: 16px;
                     display: flex;
                     justify-content: space-between;
