@@ -1,5 +1,13 @@
 /*abstracts*/
 /*vendors*/
+/*$paragraph-margin-bottom: 0;
+$headings-margin-bottom: 0; 
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+ul, ol {
+    padding-left: 0;
+}*/
 /*base*/
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo:wght@600&family=Outfit:wght@300;400;500&display=swap");
 * {
@@ -46,6 +54,7 @@ header .logo {
 }
 header .navbar {
   display: flex;
+  align-items: center;
   width: 700px;
 }
 header .navbar ul {
@@ -58,6 +67,10 @@ header .navbar ul a {
   text-decoration: none;
   color: #D1B641;
   font-size: 30px;
+  text-transform: uppercase;
+}
+header .navbar ul a span {
+  display: none;
 }
 
 footer {
@@ -400,6 +413,7 @@ footer ul {
 }
 
 /* 
+npm run sass
 sass --watch styles/scss/main.scss styles/css/style.css 
 https://sass-guidelin.es/
 */

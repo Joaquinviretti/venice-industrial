@@ -1,14 +1,23 @@
 {
   "name": "venice-industrial",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch styles/scss/main.scss styles/css/style.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.1.2"
-  }
+    "bootstrap": "^5.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquinviretti/venice-industrial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Joaquinviretti/venice-industrial/issues"
+  },
+  "homepage": "https://github.com/Joaquinviretti/venice-industrial#readme",
+  "description": ""
 }
