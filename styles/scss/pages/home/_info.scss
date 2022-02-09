@@ -1,0 +1,68 @@
+#info {
+
+    background-color: $secondary;
+    padding-bottom: 50px;
+
+    .info--mobile,
+    .info {
+        grid-area: info;
+        display: flex;
+        justify-content: space-evenly;
+
+        &__item {
+            @include item;
+            flex: 1;
+        }
+    }
+
+    .info {
+        @include sm {
+            display: none;
+        }
+    }
+
+    .info--mobile {
+        display: none;
+
+        .info__item--mobile {
+            display: none;
+        }
+
+        .item1 {
+            display: inline;
+        }
+
+        @include sm {
+            display: flex;
+            .info__item {
+                width: 10px;
+            }
+        }
+    }
+
+    .controls {
+        display: none;
+        background-color: $secondary;
+        justify-content: center;
+        padding: 20px 0;
+
+        @include sm {
+            display: flex;
+        }
+        .dot {
+            padding: 5px;
+            margin: 0 10px;
+            height: 15px;
+            width: 15px;
+            background-color: $primaryControl;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot--active {
+            background: $primaryControlActive;
+            width: 30px;
+            border-radius: 50px;
+            transition: all 0.5s;
+        }
+    }
+}

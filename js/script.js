@@ -40,7 +40,7 @@ $(".dot").on("click", (e) => {
     myInterval = setInterval(changeItem, 4000)
     let id = e.currentTarget.id
     $(".dot").removeClass("dot--active")
-    $(".item").hide()
+    $(".info__item--mobile").hide()
     $(`.item${id.substring(id.length - 1)}`).show()
     $(`#${id}`).addClass("dot--active")
 })

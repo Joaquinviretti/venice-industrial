@@ -1,0 +1,83 @@
+.destacados {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        @extend .exo;
+        text-align: center;
+        font-size: 50px;
+        padding-bottom: 40px;
+        color: $secondary;
+
+        @include sm {
+            font-size: 20px;
+        }
+    }
+
+    &__bg {
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+        border-radius: 50px 50px 0 0;
+        z-index: -1;
+        width: 100%;
+        background-color: $secondary;
+    }
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template: "cards" "button" "info" "controls";
+        grid-template-rows: auto 180px auto auto;
+        grid-template-columns: auto;
+
+        .controls {
+            grid-area: controls;
+        }
+
+        .destacados__ver-todos {
+            grid-area: button;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .button {
+                width: 370px;
+                color: $secondary;
+            }
+        }
+
+    }
+
+    &__cards {
+        grid-area: cards;
+        display: flex;
+        justify-content: space-evenly;
+
+        .destacados__card {
+            &--1 {
+                @include card("../../img/card1.png");
+            }
+
+            &--2 {
+                @include card("../../img/card2.png");
+            }
+
+            &--3 {
+                @include card("../../img/card3.png");
+            }
+        }
+
+        @include sm {
+            justify-content: space-between;
+            overflow-x: scroll;
+            flex-direction: column;
+           
+        }
+    }
+}
+
+

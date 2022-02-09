@@ -1,0 +1,39 @@
+.banner {
+    height: 90vh;
+    min-height: 350px;
+    background-image: url("../../img/portada.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+
+    &__line {
+        border-top: 3px solid $text;
+        width: 273px;
+        margin: 20px 0;
+    }
+
+    &__title {
+        color: white;
+        @extend .exo;
+        font-size: 50px;
+
+        @include sm {
+            font-size: 28px;
+        }
+    }
+
+    &__subtitle {
+        color: white;
+        @extend .exo;
+        font-size: 32px;
+        text-align: center;
+
+        @include sm {
+            font-size: 24px;
+        }
+    }
+}
