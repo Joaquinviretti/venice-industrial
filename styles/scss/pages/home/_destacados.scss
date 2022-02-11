@@ -47,9 +47,17 @@
             .button {
                 width: 370px;
                 color: $secondary;
+                @include sm {
+                    width: 80%;
+                }
             }
         }
 
+    }
+
+    &__scroll {
+        width: 100%;
+        overflow-x: auto;
     }
 
     &__cards {
@@ -69,13 +77,16 @@
             &--3 {
                 @include card("../../img/card3.png");
             }
+
+            @include sm {
+                flex-shrink: 0;
+            }
+
         }
 
         @include sm {
-            justify-content: space-between;
-            overflow-x: scroll;
-            flex-direction: column;
-           
+            overflow-x: auto; 
+            width: 730px;       
         }
     }
 }

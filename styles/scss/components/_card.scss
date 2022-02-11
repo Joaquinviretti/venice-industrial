@@ -26,14 +26,29 @@
             color: $text;
             @extend .exo;
             font-size: 26px;
+
+            @include sm {
+                font-size: 20px;
+                line-height: initial;
+            }
         }
 
         span {
             color: black;
             @extend .outfit;
             font-size: 20px;
+
+            @include sm {
+                font-size: 14px;
+                line-height: initial;
+            }
         }
 
+    }
+
+    @include sm {
+        width: 210px;
+        height: 200px;
     }
 
 }
