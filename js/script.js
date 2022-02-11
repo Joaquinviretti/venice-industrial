@@ -6,7 +6,7 @@
 
     function checkWidth() {
         var windowsize = $window.width();
-        if (windowsize > 767.98) {
+        if (windowsize > 575.98) {
             $("#closeMenuButton").hide();
             $("#list--mobile").hide(200);
             $("#openMenuButton").hide();

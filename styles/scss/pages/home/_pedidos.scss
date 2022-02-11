@@ -111,15 +111,18 @@
         flex:1;
         display: flex;
         justify-content: center;
+        padding-left: 20px;
 
         @include sm {
             justify-content: space-between;
         }
+
     }
 
     &__image {
         height: auto;
         border-radius: 20px;
+        object-fit: cover;
 
         @include sm {
             width: 47%;
@@ -132,6 +135,7 @@
             @include sm {
                 display: inline;
             }
+
         }
     }
 

@@ -1,4 +1,5 @@
 .banner {
+    margin-top: 240px;
     height: 90vh;
     min-height: 350px;
     background-image: url("../../img/portada.png");
@@ -9,6 +10,10 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 10%;
+
+    @include sm {
+        margin-top: 90px;
+    }
 
     &__line {
         border-top: 3px solid $text;
